@@ -1616,7 +1616,7 @@ limitations under the License.
 
     .ampstart-btn {
       font-family: inherit;
-      font-weight: inherit;
+      font-weight: 700;
       font-size: 1rem;
       line-height: 1.125rem;
       padding: .7em .8em;
@@ -1626,8 +1626,8 @@ limitations under the License.
       vertical-align: middle;
       cursor: pointer;
       background-color: #000;
-      color: #fff;
-      border: 1px solid #fff
+      /* color: #fff; */
+      /* border: 1px solid #fff */
     }
 
     .ampstart-btn:visited {
@@ -1636,7 +1636,7 @@ limitations under the License.
 
     .ampstart-btn-contained {
       font-family: inherit;
-      font-weight: inherit;
+      font-weight: 700;
       font-size: 1rem;
       line-height: 1.125rem;
       padding: .7em .8em;
@@ -1647,7 +1647,8 @@ limitations under the License.
       cursor: pointer;
       background-color: #fff;
       color: #000;
-      border: 1px solid #fff
+      border: 1px solid #fff;
+      border-radius: 4px;
     }
 
     .ampstart-btn-contained:visited {
@@ -1704,6 +1705,10 @@ limitations under the License.
 
     .amp-carousel-button-next {
       background-image: url('data:image/svg+xml;charset=utf-8,<svg width="18" height="18" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg"><title>Next</title><path d="M25.557 14.7L13.818 2.961 16.8 0l16.8 16.8-16.8 16.8-2.961-2.961L25.557 18.9H0v-4.2z" fill="%23FFF" fill-rule="evenodd"/></svg>')
+    }
+
+    .carousel-image {
+      border-radius: 12px;
     }
 
     .amp-carousel-button-prev {
@@ -2281,7 +2286,7 @@ limitations under the License.
     h1,
     h2,
     h3 {
-      font-family: Playfair Display, serif
+      font-family: Lato, Helvetica, sans-serif
     }
 
     .h1,
@@ -2374,7 +2379,7 @@ limitations under the License.
       padding-top: 1rem;
       padding-bottom: 1rem;
       list-style-type: none;
-      font-family: Playfair Display, serif
+      font-family: Lato, serif
     }
 
     /* Styles for the flex layout based tabs */
@@ -2450,7 +2455,7 @@ limitations under the License.
   <header class="ampstart-headerbar fixed top-0 left-0 right-0">
     <div class="flex justify-between items-center pl2 pr4 py2">
       <div>
-        <h1>Logo</h1>
+        <h1>LOGO</h1>
       </div>
       <div>
         <a class="ampstart-btn inline-block h5 text-decoration-none mr1" href="menu.amp.html">Sign
@@ -2464,7 +2469,7 @@ limitations under the License.
         <nav>
           <ul>
             <li class="menu-item">
-              <span role="button">Furniture</span>
+              <span role="button" class="h4">Furniture</span>
               <div role="dialog" class="flex left-align">
                 <ul class="flex justify-start">
                   <li class="mega-menu-list-item">
@@ -2485,7 +2490,7 @@ limitations under the License.
               </div>
             </li>
             <li class="menu-item">
-              <span role="button">Outdoor</span>
+              <span role="button" class="h4">Outdoor</span>
               <div role="dialog" class="flex left-align">
                 <ul class="flex justify-start">
                   <li class="mega-menu-list-item">
@@ -2506,7 +2511,7 @@ limitations under the License.
               </div>
             </li>
             <li class="menu-item">
-              <span role="button">Bedding & Bath</span>
+              <span role="button" class="h4">Bedding & Bath</span>
               <div role="dialog" class="flex left-align">
                 <ul class="flex justify-start">
                   <li class="mega-menu-list-item">
@@ -2536,23 +2541,18 @@ limitations under the License.
   <div class="center">
     <!-- Start Fullpage Hero -->
     <figure class="ampstart-image-fullpage-hero m0 relative mb4">
-      <amp-img width="404" height="720" alt="Welcome to Beck &amp; Galo Modern American Cuisine" layout="responsive"
-        src="../img/themes_2/hero.jpg" media="(max-width: 415px)"></amp-img>
-      <amp-img height="720" alt="Welcome to Beck &amp; Galo Modern American Cuisine" layout="fixed-height"
-        src="../img/themes_2/hero.jpg" media="(min-width: 416px)"></amp-img>
-      <figcaption class="absolute top-4 right-0 bottom-0 left-0">
+      <amp-img width="404" height="720" alt="Games Banner" layout="responsive" src="../img/themes_2/lou.jpg"
+        media="(max-width: 415px)"></amp-img>
+      <amp-img height="720" alt="Games Banner" layout="fixed-height" src="../img/themes_2/lou.jpg"
+        media="(min-width: 416px)"></amp-img>
+      <figcaption class="absolute top-4 right-0 bottom-0">
         <header class="p3">
           <h1 class="ampstart-fullpage-hero-heading mb3">
             <span class="ampstart-fullpage-hero-heading-text">
-              <span class="h6 block caps">Welcome to</span><span class="h1 block bold caps my1">Beck & Galo</span><span
-                class="h6 block caps">Modern American Cuisine</span>
+              <span class="h1 block bold caps my1">PLAY FOR PURPOSE</span>
             </span>
           </h1>
         </header>
-        <footer class="absolute left-0 right-0 bottom-0">
-          <a class="ampstart-btn inline-block ampstart-fullpage-hero-cta h5 m3 text-decoration-none"
-            href="menu.amp.html">View Menu</a>
-        </footer>
       </figcaption>
     </figure>
     <!-- End Fullpage Hero -->
@@ -2561,86 +2561,84 @@ limitations under the License.
     <article class="px3">
       <h2 id="gallery" class="my4 theme2-anchored">Promo Gallery</h2>
       <amp-image-lightbox id="lightbox" layout="nodisplay"></amp-image-lightbox>
-      <amp-carousel class="my2 mxn3" height="200" layout="fixed-height" type="carousel">
-        <amp-img src="../img/themes_2/hero.jpg" width="300" height="200" alt="Dining area" on="tap:lightbox"
-          role="button" tabindex="0"></amp-img>
-        <amp-img src="../img/themes_2/bar.jpg" width="267" height="200" alt="Bar area" on="tap:lightbox" role="button"
-          tabindex="0"></amp-img>
-        <amp-img src="../img/themes_2/waffles.jpg" width="300" height="200" alt="Caramel Banana Waffles"
+      <amp-carousel class="my2 mxn3" height="150" layout="fixed-height" type="carousel">
+        <amp-img class="carousel-image" src="../img/themes_2/promo-1.jpg" width="275" height="128" alt="Dining area"
           on="tap:lightbox" role="button" tabindex="0"></amp-img>
-        <amp-img src="../img/themes_2/soup.jpg" width="300" height="200" alt="Pumpkin Soup" on="tap:lightbox"
-          role="button" tabindex="0"></amp-img>
-        <amp-img src="../img/themes_2/steak.jpg" width="300" height="200" alt="Steak" on="tap:lightbox" role="button"
-          tabindex="0"></amp-img>
-        <amp-img src="../img/themes_2/pie.jpg" width="300" height="200" alt="Key Lime Pie" on="tap:lightbox"
-          role="button" tabindex="0"></amp-img>
+        <amp-img class="carousel-image" src="../img/themes_2/promo-2.jpg" width="275" height="128" alt="Bar area"
+          on="tap:lightbox" role="button" tabindex="0"></amp-img>
+        <amp-img class="carousel-image" src="../img/themes_2/promo-3.jpg" width="275" height="128"
+          alt="Caramel Banana Waffles" on="tap:lightbox" role="button" tabindex="0"></amp-img>
+        <amp-img class="carousel-image" src="../img/themes_2/promo-1.jpg" width="275" height="128" alt="Pumpkin Soup"
+          on="tap:lightbox" role="button" tabindex="0"></amp-img>
+        <amp-img class="carousel-image" src="../img/themes_2/promo-2.jpg" width="275" height="128" alt="Steak"
+          on="tap:lightbox" role="button" tabindex="0"></amp-img>
+        <amp-img class="carousel-image" src="../img/themes_2/promo-3.jpg" width="275" height="128" alt="Key Lime Pie"
+          on="tap:lightbox" role="button" tabindex="0"></amp-img>
       </amp-carousel>
     </article>
 
     <amp-selector class="tabs-with-flex" role="tablist" keyboard-select-mode="focus">
-      <div id="tab1" role="tab" aria-controls="tabpanel1" option selected>Lobby</div>
+      <div id="tab1" role="tab" aria-controls="tabpanel1" class="h4 bold" option selected>Lobby</div>
       <div id="tabpanel1" role="tabpanel" aria-labelledby="tab1">
         <article class="mt4">
           <h2>Stake Originals</h2>
           <amp-image-lightbox id="lightbox" layout="nodisplay"></amp-image-lightbox>
           <amp-carousel class="my2 mxn3" height="200" layout="fixed-height" type="carousel">
-            <amp-img src="../img/themes_2/hero.jpg" width="300" height="200" alt="Dining area" on="tap:lightbox"
-              role="button" tabindex="0"></amp-img>
-            <amp-img src="../img/themes_2/bar.jpg" width="267" height="200" alt="Bar area" on="tap:lightbox"
-              role="button" tabindex="0"></amp-img>
-            <amp-img src="../img/themes_2/waffles.jpg" width="300" height="200" alt="Caramel Banana Waffles"
+            <amp-img class="carousel-image" src="../img/themes_2/dice.avif" width="136" height="182" alt="Dining area"
               on="tap:lightbox" role="button" tabindex="0"></amp-img>
-            <amp-img src="../img/themes_2/soup.jpg" width="300" height="200" alt="Pumpkin Soup" on="tap:lightbox"
-              role="button" tabindex="0"></amp-img>
-            <amp-img src="../img/themes_2/steak.jpg" width="300" height="200" alt="Steak" on="tap:lightbox"
-              role="button" tabindex="0"></amp-img>
-            <amp-img src="../img/themes_2/pie.jpg" width="300" height="200" alt="Key Lime Pie" on="tap:lightbox"
-              role="button" tabindex="0"></amp-img>
+            <amp-img class="carousel-image" src="../img/themes_2/dice.avif" width="136" height="182" alt="Dining area"
+              on="tap:lightbox" role="button" tabindex="0"></amp-img>
+            <amp-img class="carousel-image" src="../img/themes_2/dice.avif" width="136" height="182" alt="Dining area"
+              on="tap:lightbox" role="button" tabindex="0"></amp-img>
+            <amp-img class="carousel-image" src="../img/themes_2/dice.avif" width="136" height="182" alt="Dining area"
+              on="tap:lightbox" role="button" tabindex="0"></amp-img>
+            <amp-img class="carousel-image" src="../img/themes_2/dice.avif" width="136" height="182" alt="Dining area"
+              on="tap:lightbox" role="button" tabindex="0"></amp-img>
+            <amp-img class="carousel-image" src="../img/themes_2/dice.avif" width="136" height="182" alt="Dining area"
+              on="tap:lightbox" role="button" tabindex="0"></amp-img>
           </amp-carousel>
         </article>
       </div>
 
-      <div id="tab2" role="tab" aria-controls="tabpanel2" option>Stake Originals</div>
+      <div class="h4 bold" id="tab2" role="tab" aria-controls="tabpanel2" option>Stake Originals</div>
       <div id="tabpanel2" role="tabpanel" aria-labelledby="tab2">
         <article class="mt3">
           <h2>Slots</h2>
           <amp-image-lightbox id="lightbox" layout="nodisplay"></amp-image-lightbox>
           <amp-carousel class="my2 mxn3" height="200" layout="fixed-height" type="carousel">
-            <amp-img src="../img/themes_2/hero.jpg" width="300" height="200" alt="Dining area" on="tap:lightbox"
-              role="button" tabindex="0"></amp-img>
-            <amp-img src="../img/themes_2/bar.jpg" width="267" height="200" alt="Bar area" on="tap:lightbox"
-              role="button" tabindex="0"></amp-img>
-            <amp-img src="../img/themes_2/waffles.jpg" width="300" height="200" alt="Caramel Banana Waffles"
+            <amp-img class="carousel-image" src="../img/themes_2/mines.avif" width="136" height="182" alt="Dining area"
               on="tap:lightbox" role="button" tabindex="0"></amp-img>
-            <amp-img src="../img/themes_2/soup.jpg" width="300" height="200" alt="Pumpkin Soup" on="tap:lightbox"
-              role="button" tabindex="0"></amp-img>
-            <amp-img src="../img/themes_2/steak.jpg" width="300" height="200" alt="Steak" on="tap:lightbox"
-              role="button" tabindex="0"></amp-img>
-            <amp-img src="../img/themes_2/pie.jpg" width="300" height="200" alt="Key Lime Pie" on="tap:lightbox"
-              role="button" tabindex="0"></amp-img>
-          </amp-carousel>
+            <amp-img class="carousel-image" src="../img/themes_2/mines.avif" width="136" height="182" alt="Dining area"
+              on="tap:lightbox" role="button" tabindex="0"></amp-img>
+            <amp-img class="carousel-image" src="../img/themes_2/mines.avif" width="136" height="182" alt="Dining area"
+              on="tap:lightbox" role="button" tabindex="0"></amp-img>
+            <amp-img class="carousel-image" src="../img/themes_2/mines.avif" width="136" height="182" alt="Dining area"
+              on="tap:lightbox" role="button" tabindex="0"></amp-img>
+            <amp-img class="carousel-image" src="../img/themes_2/mines.avif" width="136" height="182" alt="Dining area"
+              on="tap:lightbox" role="button" tabindex="0"></amp-img>
+            <amp-img class="carousel-image" src="../img/themes_2/mines.avif" width="136" height="182" alt="Dining area"
+              on="tap:lightbox" role="button" tabindex="0"></amp-img>
         </article>
       </div>
 
-      <div id="tab3" role="tab" aria-controls="tabpanel3" option>Live Casino</div>
+      <div class="h4 bold" id="tab3" role="tab" aria-controls="tabpanel3" option>Live Casino</div>
       <div id="tabpanel3" role="tabpanel" aria-labelledby="tab3">
         <article class="mt3">
           <h2>Providers</h2>
           <amp-image-lightbox id="lightbox" layout="nodisplay"></amp-image-lightbox>
           <amp-carousel class="my2 mxn3" height="200" layout="fixed-height" type="carousel">
-            <amp-img src="../img/themes_2/hero.jpg" width="300" height="200" alt="Dining area" on="tap:lightbox"
-              role="button" tabindex="0"></amp-img>
-            <amp-img src="../img/themes_2/bar.jpg" width="267" height="200" alt="Bar area" on="tap:lightbox"
-              role="button" tabindex="0"></amp-img>
-            <amp-img src="../img/themes_2/waffles.jpg" width="300" height="200" alt="Caramel Banana Waffles"
-              on="tap:lightbox" role="button" tabindex="0"></amp-img>
-            <amp-img src="../img/themes_2/soup.jpg" width="300" height="200" alt="Pumpkin Soup" on="tap:lightbox"
-              role="button" tabindex="0"></amp-img>
-            <amp-img src="../img/themes_2/steak.jpg" width="300" height="200" alt="Steak" on="tap:lightbox"
-              role="button" tabindex="0"></amp-img>
-            <amp-img src="../img/themes_2/pie.jpg" width="300" height="200" alt="Key Lime Pie" on="tap:lightbox"
-              role="button" tabindex="0"></amp-img>
-          </amp-carousel>
+            <amp-img class="carousel-image" src="../img/themes_2/blackjack.avif" width="136" height="182"
+              alt="Dining area" on="tap:lightbox" role="button" tabindex="0"></amp-img>
+            <amp-img class="carousel-image" src="../img/themes_2/blackjack.avif" width="136" height="182"
+              alt="Dining area" on="tap:lightbox" role="button" tabindex="0"></amp-img>
+            <amp-img class="carousel-image" src="../img/themes_2/blackjack.avif" width="136" height="182"
+              alt="Dining area" on="tap:lightbox" role="button" tabindex="0"></amp-img>
+            <amp-img class="carousel-image" src="../img/themes_2/blackjack.avif" width="136" height="182"
+              alt="Dining area" on="tap:lightbox" role="button" tabindex="0"></amp-img>
+            <amp-img class="carousel-image" src="../img/themes_2/blackjack.avif" width="136" height="182"
+              alt="Dining area" on="tap:lightbox" role="button" tabindex="0"></amp-img>
+            <amp-img class="carousel-image" src="../img/themes_2/blackjack.avif" width="136" height="182"
+              alt="Dining area" on="tap:lightbox" role="button" tabindex="0"></amp-img>
         </article>
       </div>
     </amp-selector>
@@ -2654,7 +2652,7 @@ limitations under the License.
 
 
     <small>
-      © Beck & Galo
+      © Stake
     </small>
   </footer>
   <!-- End Footer -->
