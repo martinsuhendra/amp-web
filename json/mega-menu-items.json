@@ -1,0 +1,23 @@
+{
+  "items": [
+    {
+      "values": [
+        {
+          "id": 1,
+          "name": "Sofa",
+          "href": "https://www.wayfair.com/furniture/sb0/sofas-c413892.html"
+        },
+        {
+          "id": 2,
+          "name": "Sectionals",
+          "href": "https://www.wayfair.com/furniture/sb0/sectionals-c413893.html"
+        },
+        {
+          "id": 3,
+          "name": "Coffee Tables",
+          "href": "https://www.wayfair.com/furniture/sb0/coffee-tables-c414602.html"
+        }
+      ]
+    }
+  ]
+}
