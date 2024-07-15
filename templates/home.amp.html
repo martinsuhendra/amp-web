@@ -2392,13 +2392,16 @@ limitations under the License.
       flex-grow: 1;
       /* custom styling, feel free to change */
       text-align: center;
-      padding: var(--space-1);
+      padding-top: 8px;
+      padding-bottom: 8px;
     }
 
     amp-selector[role=tablist].tabs-with-flex [role=tab][selected] {
       outline: none;
       /* custom styling, feel free to change */
-      border-bottom: 2px solid #fff;
+      background-color: #fff;
+      color: #000;
+      border-radius: 24px;
     }
 
     amp-selector[role=tablist].tabs-with-flex [role=tabpanel] {
@@ -2417,12 +2420,14 @@ limitations under the License.
     /* Styles for the selector based tabs */
     amp-selector[role=tablist].tabs-with-selector {
       display: flex;
+
     }
 
     amp-selector[role=tablist].tabs-with-selector [role=tab][selected] {
       outline: none;
       /* custom styling, feel free to change */
       border-bottom: 2px solid #fff;
+
     }
 
     amp-selector[role=tablist].tabs-with-selector {
@@ -2433,13 +2438,12 @@ limitations under the License.
       /* custom styling, feel free to change */
       width: 100%;
       text-align: center;
-      padding: var(--space-1);
     }
 
     amp-selector.tabpanels [role=tabpanel] {
       display: none;
       /* custom styling, feel free to change */
-      padding: var(--space-4);
+
     }
 
     amp-selector.tabpanels [role=tabpanel][selected] {
