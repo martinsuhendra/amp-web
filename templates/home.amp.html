@@ -22,6 +22,7 @@ limitations under the License.
   <meta charset="utf-8">
   <title>Beck &amp; Galo</title>
   <link rel="canonical" href="https://www.ampstart.com/templates/themes_2/home.amp">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
   <meta name="viewport" content="width=device-width">
   <meta name="amp-google-client-id-api" content="googleanalytics">
 
@@ -120,7 +121,7 @@ limitations under the License.
     }
 
     body {
-      margin: 0
+      margin: 0;
     }
 
     article,
@@ -906,6 +907,11 @@ limitations under the License.
       padding-right: 2rem
     }
 
+    .px5 {
+      padding-left: 2.5rem;
+      padding-right: 2.5rem
+    }
+
     .col {
       float: left
     }
@@ -1478,7 +1484,7 @@ limitations under the License.
     }
 
     body {
-      background: #1d1d1d;
+      background: #1a2c38;
       color: #fff;
       font-family: Lora, serif;
       min-width: 315px;
@@ -2086,7 +2092,7 @@ limitations under the License.
     }
 
     .ampstart-headerbar {
-      background-color: #000;
+      background-color: #1a2c38;
       color: #fff;
       z-index: 999;
       box-shadow: 0 0 5px 2px rgba(0, 0, 0, .1)
@@ -2360,7 +2366,7 @@ limitations under the License.
 
     amp-mega-menu,
     amp-mega-menu>nav {
-      background-color: #000;
+      background-color: #1a2c38;
     }
 
     amp-mega-menu .menu-item {
@@ -2368,7 +2374,7 @@ limitations under the License.
     }
 
     amp-mega-menu .menu-item[open]>span {
-      background-color: #000;
+      background-color: #1a2c38;
     }
 
     amp-mega-menu .menu-item[open]>div {
@@ -2462,7 +2468,7 @@ limitations under the License.
 
   <!-- Start Navbar -->
   <header class="ampstart-headerbar fixed top-0 left-0 right-0">
-    <div class="flex justify-between items-center pl2 pr4 py2">
+    <div class="flex justify-between items-center px5 py2">
       <div>
         <h1>LOGO</h1>
       </div>
@@ -2473,7 +2479,7 @@ limitations under the License.
       </div>
     </div>
     <!-- Start Mega Menu -->
-    <div class="center">
+    <div class="left">
       <amp-mega-menu height="40" layout="fixed-height">
         <nav>
           <ul>
@@ -2550,9 +2556,9 @@ limitations under the License.
   <div class="center">
     <!-- Start Fullpage Hero -->
     <figure class="ampstart-image-fullpage-hero m0 relative mb4">
-      <amp-img width="404" height="1000" alt="Games Banner" layout="responsive" src="../img/themes_2/lou.jpg"
+      <amp-img width="404" height="720" alt="Games Banner" layout="responsive" src="../img/themes_2/lou.jpg"
         media="(max-width: 415px)"></amp-img>
-      <amp-img height="1000" alt="Games Banner" layout="fixed-height" src="../img/themes_2/lou.jpg"
+      <amp-img height="720" alt="Games Banner" layout="fixed-height" src="../img/themes_2/lou.jpg"
         media="(min-width: 416px)"></amp-img>
       <figcaption class="absolute top-4 right-0 bottom-0">
         <header class="p3">
@@ -2570,7 +2576,7 @@ limitations under the License.
     <article class="px3">
       <h2 id="gallery" class="my4 theme2-anchored">Promo Gallery</h2>
       <amp-image-lightbox id="lightbox" layout="nodisplay"></amp-image-lightbox>
-      <amp-carousel class="my2 mxn3" height="150" layout="fixed-height" type="carousel">
+      <amp-carousel class="my2 mxn3 px3" height="150" layout="fixed-height" type="carousel">
         <amp-img class="carousel-image" src="../img/themes_2/promo-1.jpg" width="275" height="128" alt="Dining area"
           on="tap:lightbox" role="button" tabindex="0"></amp-img>
         <amp-img class="carousel-image" src="../img/themes_2/promo-2.jpg" width="275" height="128" alt="Bar area"
@@ -2586,13 +2592,17 @@ limitations under the License.
       </amp-carousel>
     </article>
 
-    <amp-selector class="tabs-with-flex" role="tablist" keyboard-select-mode="focus">
-      <div id="tab1" role="tab" aria-controls="tabpanel1" class="h4 bold" option selected>Lobby</div>
+    <amp-selector class="tabs-with-flex px3" role="tablist" keyboard-select-mode="focus">
+      <div id="tab1" role="tab" aria-controls="tabpanel1" class="h4 bold" option selected>
+        <!-- // add icon here -->
+        <i class="fa-solid fa-bicycle mr1"></i>
+        Lobby
+      </div>
       <div id="tabpanel1" role="tabpanel" aria-labelledby="tab1">
         <article class="mt4">
           <h2>Stake Originals</h2>
           <amp-image-lightbox id="lightbox" layout="nodisplay"></amp-image-lightbox>
-          <amp-carousel class="my2 mxn3" height="200" layout="fixed-height" type="carousel">
+          <amp-carousel class="my2 mxn3 px3" height="200" layout="fixed-height" type="carousel">
             <amp-img class="carousel-image" src="../img/themes_2/dice.avif" width="136" height="182" alt="Dining area"
               on="tap:lightbox" role="button" tabindex="0"></amp-img>
             <amp-img class="carousel-image" src="../img/themes_2/dice.avif" width="136" height="182" alt="Dining area"
@@ -2609,7 +2619,10 @@ limitations under the License.
         </article>
       </div>
 
-      <div class="h4 bold" id="tab2" role="tab" aria-controls="tabpanel2" option>Stake Originals</div>
+      <div class="h4 bold" id="tab2" role="tab" aria-controls="tabpanel2" option>
+        <i class="fa-solid fa-fire mr1"></i>
+        Stake Originals
+      </div>
       <div id="tabpanel2" role="tabpanel" aria-labelledby="tab2">
         <article class="mt3">
           <h2>Slots</h2>
@@ -2630,7 +2643,10 @@ limitations under the License.
         </article>
       </div>
 
-      <div class="h4 bold" id="tab3" role="tab" aria-controls="tabpanel3" option>Live Casino</div>
+      <div class="h4 bold" id="tab3" role="tab" aria-controls="tabpanel3" option>
+        <i class="fa-solid fa-gift mr1"></i>
+        Live Casino
+      </div>
       <div id="tabpanel3" role="tabpanel" aria-labelledby="tab3">
         <article class="mt3">
           <h2>Providers</h2>
