@@ -87,6 +87,77 @@ limitations under the License.
         visibility: visible
       }
     }
+
+    @keyframes blink {
+      0% { opacity: 1; }
+      50% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    /* Apply blinking to all icons */
+    .fa,
+    .fa-solid {
+      animation: blink 1s infinite;
+      font-size: 24px; 
+      color: #ff0000; 
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+
+    .box {
+      background: #f0f0f0;
+      border: 1px solid #ddd;
+      padding: 20px;
+      text-align: center;
+      position: relative;
+      height: 200px;
+      border-radius: 10px; /* Add rounded corners */
+    }
+
+    .box-title {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #ff0000;
+    }
+
+    .blinking-number {
+      font-size: 36px;
+      font-weight: bold;
+      color: #ff0000; /* Red color for visibility */
+      animation: blink 1s infinite;
+    }
+
+    .icon {
+        margin-top: 10px;
+        font-size: 24px; /* Adjust as needed */
+    }
+
+    .floating-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366; /* WhatsApp color */
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    .floating-button i {
+      font-size: 24px;
+    }
   </style><noscript>
     <style amp-boilerplate="">
       body {
@@ -106,6 +177,7 @@ limitations under the License.
   <script async custom-element="amp-mega-menu" src="https://cdn.ampproject.org/v0/amp-mega-menu-0.1.js"></script>
   <script async custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js"></script>
   <script async custom-element="amp-selector" src="https://cdn.ampproject.org/v0/amp-selector-0.1.js"></script>
+  <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
 
   <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700%7CLora%7CLato" rel="stylesheet">
 
@@ -645,6 +717,10 @@ limitations under the License.
     .my2 {
       margin-top: 1rem;
       margin-bottom: 1rem
+    }
+
+    .my2::-webkit-scrollbar {
+      display: none;
     }
 
     .m3 {
@@ -2556,9 +2632,9 @@ limitations under the License.
   <div class="center">
     <!-- Start Fullpage Hero -->
     <figure class="ampstart-image-fullpage-hero m0 relative mb4">
-      <amp-img width="404" height="720" alt="Games Banner" layout="responsive" src="../img/themes_2/lou.jpg"
+      <amp-img width="404" height="720" alt="Games Banner" layout="responsive" src="img/themes_2/lou.jpg"
         media="(max-width: 415px)"></amp-img>
-      <amp-img height="720" alt="Games Banner" layout="fixed-height" src="../img/themes_2/lou.jpg"
+      <amp-img height="720" alt="Games Banner" layout="fixed-height" src="img/themes_2/lou.jpg"
         media="(min-width: 416px)"></amp-img>
       <figcaption class="absolute top-4 right-0 bottom-0">
         <header class="p3">
@@ -2573,21 +2649,49 @@ limitations under the License.
     <!-- End Fullpage Hero -->
   </div>
   <main id="content" role="main">
+    
+    <article class="px3">
+      <h2 class="my4 theme2-anchored">Hello World</h2>
+      <div class="container">
+        <div class="box">
+            <div class="box-title">Title 1</div>
+            <div class="blinking-number">1234</div>
+            <div class="icon">
+                <i class="fa-solid fa-star"></i> <!-- Example icon -->
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-title">Title 2</div>
+            <div class="blinking-number">5678</div>
+            <div class="icon">
+                <i class="fa-solid fa-heart"></i> <!-- Example icon -->
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-title">Title 3</div>
+            <div class="blinking-number">91011</div>
+            <div class="icon">
+                <i class="fa-solid fa-diamond"></i> <!-- Example icon -->
+            </div>
+        </div>
+    </div>
+  </article>
+
     <article class="px3">
       <h2 id="gallery" class="my4 theme2-anchored">Promo Gallery</h2>
       <amp-image-lightbox id="lightbox" layout="nodisplay"></amp-image-lightbox>
       <amp-carousel class="my2 mxn3 px3" height="150" layout="fixed-height" type="carousel">
-        <amp-img class="carousel-image" src="../img/themes_2/promo-1.jpg" width="275" height="128" alt="Dining area"
+        <amp-img class="carousel-image" src="img/themes_2/promo-1.jpg" width="275" height="128" alt="Dining area"
           on="tap:lightbox" role="button" tabindex="0"></amp-img>
-        <amp-img class="carousel-image" src="../img/themes_2/promo-2.jpg" width="275" height="128" alt="Bar area"
+        <amp-img class="carousel-image" src="img/themes_2/promo-2.jpg" width="275" height="128" alt="Bar area"
           on="tap:lightbox" role="button" tabindex="0"></amp-img>
-        <amp-img class="carousel-image" src="../img/themes_2/promo-3.jpg" width="275" height="128"
+        <amp-img class="carousel-image" src="img/themes_2/promo-3.jpg" width="275" height="128"
           alt="Caramel Banana Waffles" on="tap:lightbox" role="button" tabindex="0"></amp-img>
-        <amp-img class="carousel-image" src="../img/themes_2/promo-1.jpg" width="275" height="128" alt="Pumpkin Soup"
+        <amp-img class="carousel-image" src="img/themes_2/promo-1.jpg" width="275" height="128" alt="Pumpkin Soup"
           on="tap:lightbox" role="button" tabindex="0"></amp-img>
-        <amp-img class="carousel-image" src="../img/themes_2/promo-2.jpg" width="275" height="128" alt="Steak"
+        <amp-img class="carousel-image" src="img/themes_2/promo-2.jpg" width="275" height="128" alt="Steak"
           on="tap:lightbox" role="button" tabindex="0"></amp-img>
-        <amp-img class="carousel-image" src="../img/themes_2/promo-3.jpg" width="275" height="128" alt="Key Lime Pie"
+        <amp-img class="carousel-image" src="img/themes_2/promo-3.jpg" width="275" height="128" alt="Key Lime Pie"
           on="tap:lightbox" role="button" tabindex="0"></amp-img>
       </amp-carousel>
     </article>
@@ -2600,45 +2704,84 @@ limitations under the License.
       </div>
       <div id="tabpanel1" role="tabpanel" aria-labelledby="tab1">
         <article class="mt4">
-          <h2>Stake Originals</h2>
-          <amp-image-lightbox id="lightbox" layout="nodisplay"></amp-image-lightbox>
+          <h2>Ground Floor</h2>
+          <amp-image-lightbox id="lightbox1" layout="nodisplay"></amp-image-lightbox>
           <amp-carousel class="my2 mxn3 px3" height="200" layout="fixed-height" type="carousel">
-            <amp-img class="carousel-image" src="../img/themes_2/dice.avif" width="136" height="182" alt="Dining area"
-              on="tap:lightbox" role="button" tabindex="0"></amp-img>
-            <amp-img class="carousel-image" src="../img/themes_2/dice.avif" width="136" height="182" alt="Dining area"
-              on="tap:lightbox" role="button" tabindex="0"></amp-img>
-            <amp-img class="carousel-image" src="../img/themes_2/dice.avif" width="136" height="182" alt="Dining area"
-              on="tap:lightbox" role="button" tabindex="0"></amp-img>
-            <amp-img class="carousel-image" src="../img/themes_2/dice.avif" width="136" height="182" alt="Dining area"
-              on="tap:lightbox" role="button" tabindex="0"></amp-img>
-            <amp-img class="carousel-image" src="../img/themes_2/dice.avif" width="136" height="182" alt="Dining area"
-              on="tap:lightbox" role="button" tabindex="0"></amp-img>
-            <amp-img class="carousel-image" src="../img/themes_2/dice.avif" width="136" height="182" alt="Dining area"
-              on="tap:lightbox" role="button" tabindex="0"></amp-img>
+            <amp-img class="carousel-image" src="img/themes_2/dice.avif" width="136" height="182" alt="Dining area"
+              on="tap:lightbox1" role="button" tabindex="0"></amp-img>
+            <amp-img class="carousel-image" src="img/themes_2/dice.avif" width="136" height="182" alt="Dining area"
+              on="tap:lightbox1" role="button" tabindex="0"></amp-img>
+            <amp-img class="carousel-image" src="img/themes_2/dice.avif" width="136" height="182" alt="Dining area"
+              on="tap:lightbox1" role="button" tabindex="0"></amp-img>
+            <amp-img class="carousel-image" src="img/themes_2/dice.avif" width="136" height="182" alt="Dining area"
+              on="tap:lightbox1" role="button" tabindex="0"></amp-img>
+            <amp-img class="carousel-image" src="img/themes_2/dice.avif" width="136" height="182" alt="Dining area"
+              on="tap:lightbox1" role="button" tabindex="0"></amp-img>
+            <amp-img class="carousel-image" src="img/themes_2/dice.avif" width="136" height="182" alt="Dining area"
+              on="tap:lightbox1" role="button" tabindex="0"></amp-img>
+            <!-- More images here -->
+          </amp-carousel>
+        </article>
+        <article class="mt4">
+          <h2>1st Floor</h2>
+          <amp-image-lightbox id="lightbox2" layout="nodisplay"></amp-image-lightbox>
+          <amp-carousel class="my2 mxn3 px3" height="200" layout="fixed-height" type="carousel">
+            <amp-img class="carousel-image" src="img/themes_2/dice.avif" width="136" height="182" alt="Dining area"
+              on="tap:lightbox2" role="button" tabindex="0"></amp-img>
+            <amp-img class="carousel-image" src="img/themes_2/dice.avif" width="136" height="182" alt="Dining area"
+              on="tap:lightbox2" role="button" tabindex="0"></amp-img>
+            <amp-img class="carousel-image" src="img/themes_2/dice.avif" width="136" height="182" alt="Dining area"
+              on="tap:lightbox2" role="button" tabindex="0"></amp-img>
+            <amp-img class="carousel-image" src="img/themes_2/dice.avif" width="136" height="182" alt="Dining area"
+              on="tap:lightbox2" role="button" tabindex="0"></amp-img>
+            <amp-img class="carousel-image" src="img/themes_2/dice.avif" width="136" height="182" alt="Dining area"
+              on="tap:lightbox2" role="button" tabindex="0"></amp-img>
+            <amp-img class="carousel-image" src="img/themes_2/dice.avif" width="136" height="182" alt="Dining area"
+              on="tap:lightbox2" role="button" tabindex="0"></amp-img>
+            <!-- More images here -->
+          </amp-carousel>
+        </article>
+        <article class="mt4">
+          <h2>3rd Floor</h2>
+          <amp-image-lightbox id="lightbox3" layout="nodisplay"></amp-image-lightbox>
+          <amp-carousel class="my2 mxn3 px3" height="200" layout="fixed-height" type="carousel">
+            <amp-img class="carousel-image" src="img/themes_2/dice.avif" width="136" height="182" alt="Dining area"
+              on="tap:lightbox3" role="button" tabindex="0"></amp-img>
+            <amp-img class="carousel-image" src="img/themes_2/dice.avif" width="136" height="182" alt="Dining area"
+              on="tap:lightbox3" role="button" tabindex="0"></amp-img>
+            <amp-img class="carousel-image" src="img/themes_2/dice.avif" width="136" height="182" alt="Dining area"
+              on="tap:lightbox3" role="button" tabindex="0"></amp-img>
+            <amp-img class="carousel-image" src="img/themes_2/dice.avif" width="136" height="182" alt="Dining area"
+              on="tap:lightbox3" role="button" tabindex="0"></amp-img>
+            <amp-img class="carousel-image" src="img/themes_2/dice.avif" width="136" height="182" alt="Dining area"
+              on="tap:lightbox3" role="button" tabindex="0"></amp-img>
+            <amp-img class="carousel-image" src="img/themes_2/dice.avif" width="136" height="182" alt="Dining area"
+              on="tap:lightbox3" role="button" tabindex="0"></amp-img>
+            <!-- More images here -->
           </amp-carousel>
         </article>
       </div>
-
+    
       <div class="h4 bold" id="tab2" role="tab" aria-controls="tabpanel2" option>
         <i class="fa-solid fa-fire mr1"></i>
         Stake Originals
       </div>
       <div id="tabpanel2" role="tabpanel" aria-labelledby="tab2">
-        <article class="mt3">
-          <h2>Slots</h2>
+        <article class="mt4">
+          <h2>Stake Originals</h2>
           <amp-image-lightbox id="lightbox" layout="nodisplay"></amp-image-lightbox>
-          <amp-carousel class="my2 mxn3" height="200" layout="fixed-height" type="carousel">
-            <amp-img class="carousel-image" src="../img/themes_2/mines.avif" width="136" height="182" alt="Dining area"
+          <amp-carousel class="my2 mxn3 px3" height="200" layout="fixed-height" type="carousel">
+            <amp-img class="carousel-image" src="img/themes_2/mines.avif" width="136" height="182" alt="Dining area"
               on="tap:lightbox" role="button" tabindex="0"></amp-img>
-            <amp-img class="carousel-image" src="../img/themes_2/mines.avif" width="136" height="182" alt="Dining area"
+            <amp-img class="carousel-image" src="img/themes_2/mines.avif" width="136" height="182" alt="Dining area"
               on="tap:lightbox" role="button" tabindex="0"></amp-img>
-            <amp-img class="carousel-image" src="../img/themes_2/mines.avif" width="136" height="182" alt="Dining area"
+            <amp-img class="carousel-image" src="img/themes_2/mines.avif" width="136" height="182" alt="Dining area"
               on="tap:lightbox" role="button" tabindex="0"></amp-img>
-            <amp-img class="carousel-image" src="../img/themes_2/mines.avif" width="136" height="182" alt="Dining area"
+            <amp-img class="carousel-image" src="img/themes_2/mines.avif" width="136" height="182" alt="Dining area"
               on="tap:lightbox" role="button" tabindex="0"></amp-img>
-            <amp-img class="carousel-image" src="../img/themes_2/mines.avif" width="136" height="182" alt="Dining area"
+            <amp-img class="carousel-image" src="img/themes_2/mines.avif" width="136" height="182" alt="Dining area"
               on="tap:lightbox" role="button" tabindex="0"></amp-img>
-            <amp-img class="carousel-image" src="../img/themes_2/mines.avif" width="136" height="182" alt="Dining area"
+            <amp-img class="carousel-image" src="img/themes_2/mines.avif" width="136" height="182" alt="Dining area"
               on="tap:lightbox" role="button" tabindex="0"></amp-img>
         </article>
       </div>
@@ -2648,28 +2791,71 @@ limitations under the License.
         Live Casino
       </div>
       <div id="tabpanel3" role="tabpanel" aria-labelledby="tab3">
-        <article class="mt3">
+        <article class="mt4">
           <h2>Providers</h2>
           <amp-image-lightbox id="lightbox" layout="nodisplay"></amp-image-lightbox>
-          <amp-carousel class="my2 mxn3" height="200" layout="fixed-height" type="carousel">
-            <amp-img class="carousel-image" src="../img/themes_2/blackjack.avif" width="136" height="182"
+          <amp-carousel class="my2 mxn3 px3" height="200" layout="fixed-height" type="carousel">
+            <amp-img class="carousel-image" src="img/themes_2/blackjack.avif" width="136" height="182"
               alt="Dining area" on="tap:lightbox" role="button" tabindex="0"></amp-img>
-            <amp-img class="carousel-image" src="../img/themes_2/blackjack.avif" width="136" height="182"
+            <amp-img class="carousel-image" src="img/themes_2/blackjack.avif" width="136" height="182"
               alt="Dining area" on="tap:lightbox" role="button" tabindex="0"></amp-img>
-            <amp-img class="carousel-image" src="../img/themes_2/blackjack.avif" width="136" height="182"
+            <amp-img class="carousel-image" src="img/themes_2/blackjack.avif" width="136" height="182"
               alt="Dining area" on="tap:lightbox" role="button" tabindex="0"></amp-img>
-            <amp-img class="carousel-image" src="../img/themes_2/blackjack.avif" width="136" height="182"
+            <amp-img class="carousel-image" src="img/themes_2/blackjack.avif" width="136" height="182"
               alt="Dining area" on="tap:lightbox" role="button" tabindex="0"></amp-img>
-            <amp-img class="carousel-image" src="../img/themes_2/blackjack.avif" width="136" height="182"
+            <amp-img class="carousel-image" src="img/themes_2/blackjack.avif" width="136" height="182"
               alt="Dining area" on="tap:lightbox" role="button" tabindex="0"></amp-img>
-            <amp-img class="carousel-image" src="../img/themes_2/blackjack.avif" width="136" height="182"
+            <amp-img class="carousel-image" src="img/themes_2/blackjack.avif" width="136" height="182"
               alt="Dining area" on="tap:lightbox" role="button" tabindex="0"></amp-img>
         </article>
       </div>
     </amp-selector>
 
+    <!-- Services Overview -->
+    <section class="mt4 px3">
+      <h2>Our Services</h2>
+      <p>Discover the range of services we offer to meet your needs. Our expert team provides <strong>professional consultation</strong>, <strong>custom solutions</strong>, and <strong>ongoing support</strong>. We specialize in <em>industry-leading solutions</em> to help you achieve your goals.</p>
+      <div class="icon-list">
+        <i class="fa-solid fa-cogs" title="Custom Solutions"></i>
+        <i class="fa-solid fa-headset" title="Customer Support"></i>
+        <i class="fa-solid fa-chart-line" title="Consultation"></i>
+      </div>
+    </section>
 
+    <!-- Features Highlight -->
+    <section class="mt4 px3">
+      <h2>Features & Benefits</h2>
+      <p>Our offerings come with a variety of features designed to enhance your experience. Key benefits include <strong>seamless integration</strong>, <strong>robust security</strong>, and <strong>user-friendly interfaces</strong>. Explore how our features can benefit you.</p>
+      <div class="icon-list">
+        <i class="fa-solid fa-lock" title="Security"></i>
+        <i class="fa-solid fa-plug" title="Integration"></i>
+        <i class="fa-solid fa-user" title="User-Friendly"></i>
+      </div>
+    </section>
 
+    <!-- Client Testimonials -->
+    <section class="mt4 px3">
+      <h2>Client Testimonials</h2>
+      <p>Read what our clients have to say about our services. We take pride in delivering exceptional results and value the feedback from those who have experienced our solutions.</p>
+      <div class="icon-list">
+        <i class="fa-solid fa-quote-left" title="Testimonials"></i>
+        <i class="fa-solid fa-star" title="Ratings"></i>
+      </div>
+    </section>
+
+    <!-- Payment Icons Section -->
+    <section class="mt4 px3">
+      <h2>Payment Options</h2>
+      <p>We accept various payment methods for your convenience:</p>
+      <div class="payment-icons">
+        <i class="fa-brands fa-visa" title="Visa"></i>
+        <i class="fa-brands fa-mastercard" title="MasterCard"></i>
+        <i class="fa-brands fa-amex" title="American Express"></i>
+        <i class="fa-brands fa-paypal" title="PayPal"></i>
+        <!-- Add more icons as needed -->
+      </div>
+    </section>
+    
   </main>
 
   <!-- Start Footer -->
